@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="add" class="main.java.business.Add"/>
+    <bean id="anotherAdd" class="main.java.business.AnotherAdd"/>
+    <bean id="delete" class="main.java.business.Delete"/>
+    <bean id="getBook" class="main.java.business.GetBook"/>
+    <bean id="getBooks" class="main.java.business.GetBooks"/>
+    <bean id="generalProject" class="main.java.general.Project">
+        <property name="basicAdd" ref="add"/>
+        <property name="basicDelete" ref="delete"/>
+        <property name="basicGetBook" ref="getBook"/>
+        <property name="basicGetBooks" ref="getBooks"/>
+    </bean>
+</beans>
